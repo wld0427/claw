@@ -48,6 +48,8 @@ function rollRarity(rng: () => number): Rarity {
     if (roll < 0) return rarity
   }
   console.warn('rollRarity failed to pick a rarity, defaulting to common')
+  console.warn('This should never happen, check RARITY_WEIGHTS and RARITIES for consistency') 
+  
   return 'common'
 }
 
